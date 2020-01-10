@@ -1,12 +1,15 @@
 import React from 'react';
 import {Component} from 'react';
 import '../index.css'
+
 const initState = {
-    custPW: "",
-    custEmail: "",
-    PWError: "",
+    email: "",
+    password: "",
     emailError: "",
+    PWError: ""
 }
+
+
 class Register extends Component{
     state = initState;
     handleChange = event =>{
@@ -15,35 +18,33 @@ class Register extends Component{
             [event.target.name]: isCheckBox ? event.target.checked : event.target.value
         });
     };
-    validate = () =>{
-        let PWError = "";
-        let emailError = "";
 
-        if(!this.state.custEmail){
+    validate = () =>{
+        let emailError = "";
+        let PWError = "";
+        
+        if(!this.state.email){
             emailError = "Email cannot be empty";
         }
-        if(!this.state.custPW){
+
+        if(!this.state.password){
             PWError = "Password cannot be empty";
         }
-        
+
         if(emailError || PWError){
             this.setState({emailError, PWError});
             return false;
         }
         return true;
     };
+
     handleSubmit = event =>{
         event.preventDefault();
         const isValid = this.validate();
         if(isValid){
-            alert("Hi!");
+            alert("You have been registered!");
             this.setState(initState);
         }
-        else{
-            console.log(this.state.custPW);
-            console.log(this.state.custPW2);
-        }
-        
     }
     render(){
         return(
@@ -56,29 +57,29 @@ class Register extends Component{
                 <form onSubmit={this.handleSubmit}>
                     <div className="form-group">
                         <label for="firstName">First Name</label>
-                        <input type="text" required="" className="form-control" id="firstName" placeholder="First Name" onChange={this.handleChange}/>
+                        <input type="text" required="" className="form-control" name="firstName" placeholder="First Name" onChange={this.handleChange} noValidate/>
                     </div>
                     <div className="form-group">
                         <label for="lastName">Last Name</label>
-                        <input type="text" required="" className="form-control" id="lastName" placeholder="Last Name" onChange={this.handleChange}/>
+                        <input type="text" required="" className="form-control" name="lastName" placeholder="Last Name" onChange={this.handleChange} noValidate/>
                     </div>
                     <div className="form-group">
                         <label for="email">Email</label>
-                        <input type="email" required="" className="form-control" id="email" placeholder="Email" onChange={this.handleChange}/>
+                        <input type="email" required="" className="form-control" name="email" placeholder="Email" onChange={this.handleChange} noValidate/>
                     </div>
                     <div className="errorMsg">{this.state.emailError}</div>
                     <div className="form-group">
                         <label for="username">Username</label>
-                        <input type="text" required="" className="form-control" id="username" placeholder="Username" onChange={this.handleChange}/>
+                        <input type="text" required="" className="form-control" name="username" placeholder="Username" onChange={this.handleChange} noValidate/>
                     </div>
                     <div className="form-group">
                         <label for="password">Password</label>
-                        <input type="password" required="" className="form-control" id="password" placeholder="Password" onChange={this.handleChange}/>
+                        <input type="password" required="" className="form-control" name="password" placeholder="Password" onChange={this.handleChange} noValidate/>
                     </div>
                     <div className="errorMsg">{this.state.PWError}</div>
                     <div className="form-group">
                         <label for="age">Age</label>
-                        <input type="number" className="form-control" id="age" placeholder="Age" onChange={this.handleChange}/>
+                        <input type="number" className="form-control" name="age" placeholder="Age" onChange={this.handleChange} noValidate/>
                     </div>
                     
                     <div className="form-group">
@@ -95,10 +96,10 @@ class Register extends Component{
                     </div>
                     <div className="form-group">
                         <label for="phoneNumber">Phone Number</label>
-                        <input type="number" className="form-control" id="phoneNumber" placeholder="Phone Number" onChange={this.handleChange}/>
+                        <input type="number" className="form-control" name="phoneNumber" placeholder="Phone Number" onChange={this.handleChange} noValidate/>
                     </div>
 
-                    <button className="btn btn-primary" type="submit" id="btn_regis">Register</button>
+                    <button className="btn btn-primary" type="submit" name="btn_regis">Register</button>
                 </form>
                 
                 </section>
