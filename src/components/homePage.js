@@ -35,7 +35,7 @@ class HomePage extends Component{
 
     render(){
         return (
-            <main className="margin-50 news-home-container">
+            <main className="margin-50 news-home-container" >
                 <section className="news-home-header">
                     <Carousel news={this.state.newsPopuler}/>
                     <div className="sp-32"></div>

@@ -7,7 +7,7 @@ class Carousel extends Component{
     render(){
         const News = this.props.news;
         let newsContents;
-        if(typeof News !== "undefined"){
+        if(typeof News !== "undefined" ){
             newsContents = News.map((newsContent,index) =>  <CarouselContent id={index} tag='umum' title={newsContent.title}  img={newsContent.urlToImage}/>)
         }
         return (

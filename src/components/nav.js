@@ -4,7 +4,7 @@ import {NavLink} from 'react-router-dom';
 import '../index.css';
 import {Link} from 'react-router-dom';
 
-class nav extends Component{ 
+class nav extends Component { 
     state={
         searchPath : ""
     }

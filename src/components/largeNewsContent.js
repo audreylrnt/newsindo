@@ -7,7 +7,7 @@ class LargeNewsContent extends Component{
     render(){
         const path = "/"+this.props.tag.toLowerCase()+"/page/"+this.props.id;
         return(
-            <div className="news-container">
+            <div className="news-container" >
                 <div className="news-img">
                     <img src={this.props.img} alt="news-img"/>
                 </div>

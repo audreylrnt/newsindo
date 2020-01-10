@@ -4,7 +4,7 @@ import '../index.css'
 
 class CarouselContent extends Component{
     render(){
-        if(this.props.id === 0){
+        if(this.props.id === 0 ){
             return (
                 <div className="carousel-item active">
                     <div style={{backgroundColor:"black", width :"100%", height: "100%"}}>

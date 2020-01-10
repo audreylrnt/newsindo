@@ -4,7 +4,7 @@ import LargeNewsContainer from './largeNewsContainer';
 import '../index.css';
 
 
-class SearchPage extends Component{
+class SearchPage extends Component {
     state = {
         news:[]
     }

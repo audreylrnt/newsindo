@@ -2,7 +2,7 @@ import React from 'react';
 import {Component} from 'react';
 import '../index.css'
 
-class NewsContentPage extends Component{
+class NewsContentPage extends Component {
     render(){
         return(
             <section class="news-full-content">

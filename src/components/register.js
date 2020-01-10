@@ -38,7 +38,7 @@ class Register extends Component{
         return true;
     };
 
-    handleSubmit = event =>{
+    handleSubmit = event => {
         event.preventDefault();
         const isValid = this.validate();
         if(isValid){

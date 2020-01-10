@@ -7,7 +7,7 @@ class MiniNewsContent extends Component{
     render(){
         const path = "/"+this.props.tag+"/page/"+this.props.id;
         return(
-            <div className="most-popular-container">
+            <div className="most-popular-container" >
                 <div className="most-news-img">
                     <img src={this.props.img} alt="news-img"/>
                 </div>

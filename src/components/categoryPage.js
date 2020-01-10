@@ -30,7 +30,7 @@ class CategoryPage extends Component{
 
     render(){
         return ( 
-            <main className="margin-50">
+            <main className="margin-50" >
                 <LargeNewsContainer title={this.props.title} news={this.state.news} tag={this.props.title}/>
             </main>
         );

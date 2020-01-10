@@ -9,7 +9,7 @@ class ContentPage extends Component{
         news:[]
     }
 
-    componentDidMount(){
+    componentDidMount() {
         var url = 'https://newsapi.org/v2/top-headlines?' +
         'country=id' +
         '&category=' +this.props.category+ 

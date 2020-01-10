@@ -5,7 +5,7 @@ import '../index.css'
 
 class MiniNewsContainer extends Component{
     render(){
-          const News = this.props.news;
+          const News = this.props.news ;
         let newsContents;
         if(typeof News !== "undefined"){
             newsContents = News.map((newsContent,index) => <MiniNewsContent img={newsContent.urlToImage} id={index} tag={this.props.tag} title={newsContent.title} time={newsContent.publishedAt}/>)

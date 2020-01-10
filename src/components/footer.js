@@ -6,7 +6,7 @@ class footer extends Component{
     render(){
         return(
             <div>
-                <p> &copy; 2020 newsindo</p>
+                <p> &copy; 2020 newsindo </p>
             </div>
         )
     }

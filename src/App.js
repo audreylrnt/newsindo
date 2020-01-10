@@ -13,7 +13,7 @@ import './App.css';
 function App() {
     return (
         <Router>
-            <header>
+            <header >
                 <Nav />
             </header>
             <Route exact path="/" component={HomePage}/>

@@ -9,7 +9,7 @@ const initState = {
     PWError: ""
 }
 
-class Login extends Component{
+class Login extends Component {
     state = initState;
     handleChange = event =>{
         const isCheckBox = event.target.type === "checkbox";
